@@ -8,7 +8,10 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Welcome. Supply a \"query=\" parameter for /site to get a new site."
+    return "Welcome. Supply a \"query=\" parameter for /site to get a new site." +\
+           "<form action=\"/site\">" +\
+           "<input type=\"text\" id=\"query\" name=\"query\">" +\
+           "<input type=\"submit\" value=\"Submit\">"
 
 
 @app.route('/site')
