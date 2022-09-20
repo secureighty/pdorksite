@@ -5,6 +5,8 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt
+RUN touch output.txt
+RUN chmod 777 output.txt
 
 COPY app.py .
 
